@@ -7,16 +7,16 @@
   overflow: hidden; 
 }
 .timeline-slider {
-  -webkit-appearance: none; /* Remove default styling for WebKit browsers */
-  width: 100%; /* Full-width slider */
-  height: 50px; /* Increased height to match the reference */
-  background: linear-gradient(to right, #6a0dad, #9370db); /* Gradient background */
-  border-radius: 10px; /* Rounded edges for the slider track */
-  outline: none; /* Remove focus outline */
+  -webkit-appearance: none; 
+  width: 100%; 
+  height: 50px; 
+  background: linear-gradient(to right, #6a0dad, #9370db); 
+  border-radius: 10px; 
+  outline: none; 
   overflow: hidden;
-  position: relative; /* Allows placement of elements like grid lines */
+  position: relative; 
   cursor: pointer;
-  margin-top: 20px; /* Centering slider */
+  margin-top: 20px; 
 }
 
 .timelimit-container {
@@ -25,16 +25,16 @@
   display: flex;
   justify-content: space-between;
 }
-/* Slider Thumb */
+
 .timeline-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 10px; /* Width of the thumb */
-  height: 50px; /* Height to match the slider track */
+  width: 10px; 
+  height: 50px; 
   background-color: white;
   border-radius: 2px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
   cursor: pointer;
-  border: 2px solid #6a0dad; /* Optional border for thumb */
+  border: 2px solid #6a0dad; 
 }
 
 .timeline-slider::-moz-range-thumb {
@@ -47,11 +47,10 @@
   border: 2px solid #6a0dad;
 }
 
-/* Progress styling */
 .timeline-slider::-webkit-slider-runnable-track {
   width: 100%;
-  height: 50px; /* Matches the track height */
-  background: linear-gradient(to right, #6a0dad, #9370db); /* Matches the track gradient */
+  height: 50px; 
+  background: linear-gradient(to right, #6a0dad, #9370db); 
   border-radius: 10px;
 }
 .timeline-slider::-moz-range-track {
@@ -61,7 +60,7 @@
   border-radius: 10px;
 }
 
-/* Vertical Grid Lines */
+
 .timeline-slider::before {
   content: "";
   position: absolute;
@@ -75,8 +74,8 @@
     transparent 9%,
     rgba(255, 255, 255, 0.5) 10%
   );
-  pointer-events: none; /* Ensure the grid lines don’t interfere with interaction */
-  opacity: 0.6; /* Slight transparency for the grid */
+  pointer-events: none; 
+  opacity: 0.6; 
 }
 
 

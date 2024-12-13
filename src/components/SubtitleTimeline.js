@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import SubtitleBar from "./SubtitleBar";
 import "./SubtitleTimeline.css";
 
 const SubtitleTimeline = ({ setCurrentSubtitle }) => {
@@ -47,17 +46,6 @@ const SubtitleTimeline = ({ setCurrentSubtitle }) => {
         onChange={handleSliderChange}
         className="timeline-slider"
       />
-      {/* <div className="subtitle-container">
-        {subtitles.map((subtitle, index) => (
-          <SubtitleBar
-            key={index}
-            start={subtitle.start_time}
-            end={subtitle.end_time}
-            text={subtitle.subtitle}
-            currentTime={currentTime}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

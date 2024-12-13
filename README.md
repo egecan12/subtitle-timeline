@@ -1,8 +1,14 @@
 # Getting Started with Create React App
 
+![image](https://github.com/user-attachments/assets/4ea26294-5a52-4e8a-b60b-e50654baa646)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+Go to SUBTITLE-TIMELINE folder and run
+
+### `npm install`
 
 In the project directory, you can run:
 
