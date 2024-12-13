@@ -29,7 +29,7 @@ const SubtitleTimeline = () => {
         onChange={handleSliderChange}
         className="timeline-slider"
       />
-      <div className="timeline">
+      <div className="subtitle-container">
         {subtitles.map((subtitle, index) => (
           <SubtitleBar
             key={index}
