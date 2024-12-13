@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import SubtitleTimeline from "./components/SubtitleTimeline";
+import SubtitleDisplay from "./components/SubtitleDisplay";
 
 function App() {
+  const [currentSubtitle, setCurrentSubtitle] = useState("");
+
+  useEffect(() => {
+    // Fetch subtitle JSON data
+    fetch("/subtitle.json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Set the initial subtitle
+        if (data.length > 0) {
+          setCurrentSubtitle(data[0].subtitle);
+        }
+      })
+      .catch((error) => console.error("Error loading subtitles:", error));
+  }, []);
+
   return (
     <div className="app-container">
       {/* Sidebar */}
@@ -30,12 +46,12 @@ function App() {
 
         {/* Subtitle Display */}
         <section className="subtitle-display">
-          <p>Lorem Ipsum</p>
+          <SubtitleDisplay text={currentSubtitle} />
         </section>
 
         {/* Timeline */}
         <section className="timeline">
-          <SubtitleTimeline />
+          <SubtitleTimeline setCurrentSubtitle={setCurrentSubtitle} />
         </section>
       </main>
     </div>

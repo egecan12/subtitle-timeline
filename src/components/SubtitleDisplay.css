@@ -1,0 +1,9 @@
+.subtitle-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+  }

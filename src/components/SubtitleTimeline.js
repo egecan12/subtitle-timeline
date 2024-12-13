@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SubtitleBar from "./SubtitleBar";
 import "./SubtitleTimeline.css";
 
-const SubtitleTimeline = () => {
+const SubtitleTimeline = ({ setCurrentSubtitle }) => {
   const [subtitles, setSubtitles] = useState([]);
   const [currentTime, setCurrentTime] = useState(0);
 
@@ -15,7 +15,21 @@ const SubtitleTimeline = () => {
   }, []);
 
   const handleSliderChange = (event) => {
-    setCurrentTime(parseFloat(event.target.value));
+    const newTime = parseFloat(event.target.value);
+    setCurrentTime(newTime);
+
+    // Find the current subtitle based on the new time
+    const currentSubtitle = subtitles.find(
+      (subtitle) =>
+        newTime >= subtitle.start_time && newTime <= subtitle.end_time
+    );
+
+    // Update the current subtitle text
+    if (currentSubtitle) {
+      setCurrentSubtitle(currentSubtitle.subtitle);
+    } else {
+      setCurrentSubtitle("");
+    }
   };
 
   return (
