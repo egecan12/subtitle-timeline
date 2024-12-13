@@ -17,13 +17,13 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1440px;
-  gap: 10px;
+  gap: 0; /* Remove gap between grid items */
 }
 
 /* White Border for All Sections */
 .sidebar, .video-panel, .subtitle-display, .timeline {
-  border: 8px solid white;
-  border-radius: 10px;
+  border: 12px solid white;
+  border-radius: 0px;
 }
 
 /* Sidebar */
@@ -36,21 +36,11 @@ body {
   padding: 40px;
 }
 
-.toggle-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-}
-
-.toggle-container label {
-  cursor: pointer;
-}
-
 /* Main Content */
 .main-content {
   display: grid;
   grid-template-rows: 3fr 1fr 1fr;
+  gap: 0; /* Remove gap between grid items */
 }
 
 /* Video Panel */
@@ -60,7 +50,7 @@ body {
   align-items: center;
   background-color: black;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 0px;
   position: relative; /* Add this to position the export button */
 }
 
@@ -68,8 +58,7 @@ body {
   position: relative;
   width: 25%;
   height: 300px;
-  background: linear-gradient(to bottom, #a17fe0, #5d26c1);
-  border-radius: 10px;
+  background: linear-gradient(to bottom, #8f63df, #c4b4e1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +68,6 @@ body {
   position: absolute;
   width: 90%;
   height: 90%;
-  background: linear-gradient(to top, #000, transparent);
   border-radius: 10px;
 }
 
@@ -91,7 +79,6 @@ body {
 
 .video-controls button {
   background: transparent;
-  border: 2px solid white;
   color: white;
   border-radius: 50%;
   width: 50px;
@@ -120,7 +107,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-  border-radius: 10px;
   font-size: 28px;
   font-weight: bold;
 }
@@ -129,7 +115,7 @@ body {
 .timeline {
   background-color: black;
   padding: 20px;
-  border-radius: 10px;
+  border: 10px solid white;
 }
 
 .timeline-markers {
