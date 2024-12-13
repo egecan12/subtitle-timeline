@@ -1,0 +1,18 @@
+.subtitle-bar {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(72, 61, 139, 0.8);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    top: -30px; /* Adjust this value to position the subtitle above the slider */
+  }
+  
+  .subtitle-text {
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
