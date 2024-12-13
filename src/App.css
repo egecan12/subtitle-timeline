@@ -170,27 +170,25 @@ body {
 .toggle-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Spacing between the label and the toggle */
+  gap: 10px; 
   font-family: Arial, sans-serif;
-  color: white; /* Text color */
+  color: white; 
 }
 
-/* The outer switch container */
 .switch {
   position: relative;
   display: inline-block;
-  width: 40px; /* Width of the toggle */
-  height: 20px; /* Height of the toggle */
+  width: 40px; 
+  height: 20px; 
 }
 
-/* Hide the default checkbox */
+
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider background */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -199,28 +197,27 @@ body {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  border-radius: 34px; /* Rounded edges */
+  border-radius: 34px; 
   transition: background-color 0.4s;
 }
 
-/* The slider's circle (thumb) */
+
 .slider:before {
   position: absolute;
   content: "";
-  height: 14px; /* Size of the circle */
+  height: 14px; 
   width: 14px;
   left: 3px;
   bottom: 3px;
-  background-color: black; /* Color of the circle */
+  background-color: black; 
   border-radius: 50%;
   transition: transform 0.4s;
 }
 
-/* When checked, change background and move the circle */
 .switch input:checked + .slider {
-  background-color: #4caf50; /* Green background for active state */
+  background-color: #4caf50; 
 }
 
 .switch input:checked + .slider:before {
-  transform: translateX(20px); /* Move the circle to the right */
+  transform: translateX(20px); 
 }
