@@ -41,7 +41,9 @@ function App() {
             <button>▶</button>
             <button>⟳</button>
           </div>
-          <button className="export-button">EXPORT →</button>
+          <div class="export-button-container">
+            <button class="export-button">Export</button>
+          </div>
         </section>
 
         {/* Subtitle Display */}

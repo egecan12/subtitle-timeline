@@ -1,13 +1,13 @@
 /* General Styles */
 body {
-  margin-top: 15%;
+  margin: 0;
   font-family: "Arial", sans-serif;
   background-color: black;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh; /* Adjusted to 100vh */
 }
 
 .app-container {
@@ -17,13 +17,15 @@ body {
   height: 100%;
   width: 100%;
   max-width: 1440px;
-  gap: 0; /* Remove gap between grid items */
+  gap: 0;
+  overflow: hidden; /* Added to handle overflow */
 }
 
 /* White Border for All Sections */
 .sidebar, .video-panel, .subtitle-display, .timeline {
   border: 12px solid white;
-  border-radius: 0px;
+  border-radius: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 /* Sidebar */
@@ -34,13 +36,15 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 40px;
+  overflow: auto; /* Added to handle overflow */
 }
 
 /* Main Content */
 .main-content {
   display: grid;
   grid-template-rows: 3fr 1fr 1fr;
-  gap: 0; /* Remove gap between grid items */
+  gap: 0;
+  overflow: hidden; /* Added to handle overflow */
 }
 
 /* Video Panel */
@@ -50,13 +54,15 @@ body {
   align-items: center;
   background-color: black;
   padding: 20px;
-  border-radius: 0px;
-  position: relative; 
+  border-radius: 0;
+  position: relative;
+  overflow: hidden; /* Added to handle overflow */
 }
 
 .video-display {
   position: relative;
-  width: 25%;
+  width: 200px; /* Adjusted to 100% */
+  max-width: 600px; /* Added max-width */
   height: 300px;
   background: linear-gradient(to bottom, #8f63df, #c4b4e1);
   display: flex;
@@ -74,31 +80,34 @@ body {
 .video-controls {
   display: flex;
   gap: 20px;
-  margin-top: 20px; /* Add margin to create space between video display and controls */
+  margin-top: 20px;
 }
 
 .video-controls button {
   background: transparent;
   color: white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
+  border: none;
   cursor: pointer;
+}
+.export-button-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .export-button {
-  position: absolute; /* Add this to position the button */
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  padding: 10px 20px;
-  border: 1px solid white;
-  background-color: black;
+  background-color: transparent; /* Transparent background */
   color: white;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
+  border: 2px solid white; /* White border */
+  padding: 10px 20px;
   cursor: pointer;
+  border-radius: 20px; /* Rounded corners for pill shape */
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between text and arrow */
 }
 
 /* Subtitle Display */
@@ -109,6 +118,7 @@ body {
   background-color: black;
   font-size: 28px;
   font-weight: bold;
+  overflow: hidden; /* Added to handle overflow */
 }
 
 /* Timeline */
@@ -116,12 +126,12 @@ body {
   background-color: black;
   padding: 20px;
   border: 10px solid white;
+  overflow: hidden; /* Added to handle overflow */
 }
 
 .timeline-markers {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20px;
 }
 
 .timeline-markers button {
