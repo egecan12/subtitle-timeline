@@ -45,6 +45,7 @@ body {
   grid-template-rows: 3fr 1fr 1fr;
   gap: 0;
   overflow: hidden; /* Added to handle overflow */
+  height: 750px;
 }
 
 /* Video Panel */

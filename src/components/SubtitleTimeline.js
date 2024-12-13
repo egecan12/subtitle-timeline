@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SubtitleBar from "./SubtitleBar";
+// import SubtitleBar from "./SubtitleBar";
 import "./SubtitleTimeline.css";
 
 const SubtitleTimeline = ({ setCurrentSubtitle }) => {
@@ -34,16 +34,20 @@ const SubtitleTimeline = ({ setCurrentSubtitle }) => {
 
   return (
     <div className="timeline-container">
+      <div className="timelimit-container">
+        <div>0</div>
+        <div>{subtitles[subtitles.length - 1]?.end_time}</div>
+      </div>
       <input
         type="range"
         min="0"
-        max="100"
+        max={subtitles[subtitles.length - 1]?.end_time}
         step="0.01"
         value={currentTime}
         onChange={handleSliderChange}
         className="timeline-slider"
       />
-      <div className="subtitle-container">
+      {/* <div className="subtitle-container">
         {subtitles.map((subtitle, index) => (
           <SubtitleBar
             key={index}
@@ -53,7 +57,7 @@ const SubtitleTimeline = ({ setCurrentSubtitle }) => {
             currentTime={currentTime}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
