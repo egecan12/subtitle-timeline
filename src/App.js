@@ -31,11 +31,14 @@ function App() {
       <aside className="sidebar">
         <div className="toggle-container">
           <label htmlFor="animationToggle">Animation</label>
-          <input
-            type="checkbox"
-            id="animationToggle"
-            onChange={handleToggleChange}
-          />
+          <label className="switch">
+            <input
+              type="checkbox"
+              id="animationToggle"
+              onChange={handleToggleChange}
+            />
+            <span className="slider"></span>
+          </label>
         </div>
       </aside>
 
